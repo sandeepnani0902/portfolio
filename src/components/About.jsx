@@ -29,13 +29,13 @@ export default function About({
       <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 text-textCustom reveal reveal-delay-1">
         {title}
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center mt-16">
         <div className="space-y-5 reveal">
           {paragraphs.map((p, idx) => (
             <p key={idx} className="text-mutedCustom text-base leading-relaxed">{p}</p>
           ))}
-          
+
           <div className="grid grid-cols-2 gap-5 mt-8">
             {stats.map((stat, idx) => (
               <div key={idx} className={`bg-surface border border-borderCustom rounded-xl p-6 transition-all duration-300 hover:border-accentCustom hover:bg-surface2 hover:-translate-y-0.5 ${stat.delayClass}`}>

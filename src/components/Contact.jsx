@@ -25,10 +25,10 @@ export default function Contact({
       alert("Please fill in all fields before sending.");
       return;
     }
-    
+
     setIsSubmitting(true);
     console.log("Contact form submission data:", formData);
-    
+
     // Simulate API delay
     setTimeout(() => {
       alert("Kindly approach me with other options, presently I am not available through mail forms.");
@@ -45,43 +45,43 @@ export default function Contact({
       <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 text-textCustom reveal reveal-delay-1">
         {title}
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-16">
         <form className="flex flex-col gap-5 reveal" onSubmit={handleSendMessage}>
           <div className="flex flex-col gap-2">
             <label className="text-xs md:text-sm font-medium text-mutedCustom tracking-wider">Your Name</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15" 
-              placeholder="John Doe" 
+              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15"
+              placeholder="John Doe"
             />
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-xs md:text-sm font-medium text-mutedCustom tracking-wider">Email Address</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15" 
-              placeholder="john@company.com" 
+              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15"
+              placeholder="john@company.com"
             />
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-xs md:text-sm font-medium text-mutedCustom tracking-wider">Message</label>
-            <textarea 
+            <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15 min-h-[140px]" 
+              className="bg-surface border border-borderCustom text-textCustom p-3.5 rounded-lg text-sm md:text-base outline-none resize-none transition-all duration-200 placeholder:text-mutedCustom/60 focus:border-accentCustom focus:bg-surface2 focus:ring-3 focus:ring-accentCustom/15 min-h-[140px]"
               placeholder="Tell me about your project or opportunity..."
             ></textarea>
           </div>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="bg-gradient-to-r from-accentCustom to-accentCustom2 text-white px-8 py-3.5 rounded-lg text-sm md:text-base font-semibold transition-all duration-300 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(108,99,255,0.35)] disabled:opacity-50 cursor-pointer"
             disabled={isSubmitting}
           >
@@ -94,9 +94,9 @@ export default function Contact({
           <p className="text-mutedCustom text-sm md:text-base leading-relaxed mb-8">{subtitle}</p>
           <div className="flex flex-col gap-4">
             {contactLinks.map((link, idx) => (
-              <a 
-                key={idx} 
-                href={link.url} 
+              <a
+                key={idx}
+                href={link.url}
                 className="flex items-center gap-4 p-4 bg-surface border border-borderCustom rounded-xl text-textCustom transition-all duration-300 hover:border-accentCustom hover:bg-surface2 hover:translate-x-1"
                 target="_blank"
                 rel="noopener noreferrer"

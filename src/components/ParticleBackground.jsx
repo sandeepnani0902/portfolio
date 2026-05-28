@@ -30,7 +30,7 @@ export default function ParticleBackground() {
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, W, H);
-      
+
       // Update and draw particles
       pts.forEach((p) => {
         p.x += p.vx;

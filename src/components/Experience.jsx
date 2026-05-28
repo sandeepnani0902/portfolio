@@ -38,7 +38,7 @@ export default function Experience({
       <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 text-textCustom reveal reveal-delay-1">
         {title}
       </h2>
-      
+
       <div className="timeline-line relative mt-16 pl-[1px]">
         {experienceData.map((item, idx) => (
           <div key={idx} className="timeline-item flex gap-6 md:gap-10 mb-12 relative items-start">

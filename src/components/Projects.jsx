@@ -84,11 +84,11 @@ export default function Projects({
       <p className="text-mutedCustom text-base md:text-lg max-w-[560px] leading-relaxed reveal reveal-delay-2">
         {subtitle}
       </p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
         {projectsData.map((project, idx) => (
-          <div 
-            key={idx} 
+          <div
+            key={idx}
             className={`bg-surface border border-borderCustom rounded-2xl overflow-hidden transition-all duration-300 hover:border-borderCustom2 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(0,0,0,0.4)] group ${project.featured ? 'md:col-span-2' : ''} ${project.delayClass}`}
           >
             <div className={`project-preview relative overflow-hidden flex items-center justify-center ${project.featured ? 'h-[260px]' : 'h-[200px]'} ${project.bgClass}`}>
@@ -104,9 +104,9 @@ export default function Projects({
               </div>
               <div className="flex gap-3">
                 {project.links.map((link, lIdx) => (
-                  <a 
-                    key={lIdx} 
-                    href={link.url} 
+                  <a
+                    key={lIdx}
+                    href={link.url}
                     className="inline-flex items-center gap-1.5 text-mutedCustom text-xs md:text-sm font-medium border border-borderCustom px-3.5 py-2 rounded-lg transition-all duration-200 hover:text-accentCustom2 hover:border-accentCustom hover:bg-accentCustom/5 cursor-pointer"
                     target={link.url.startsWith('#') ? '_self' : '_blank'}
                     rel="noopener noreferrer"

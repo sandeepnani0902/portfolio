@@ -91,11 +91,11 @@ export default function Skills({
         <p className="text-mutedCustom text-base md:text-lg max-w-[560px] leading-relaxed reveal reveal-delay-2">
           {subtitle}
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 pb-24">
           {skillsData.map((card, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`bg-surface border border-borderCustom rounded-2xl p-7 transition-all duration-300 relative overflow-hidden hover:border-borderCustom2 hover:bg-surface2 hover:-translate-y-1 ${card.wide ? 'md:col-span-2' : ''} ${card.tall ? 'md:row-span-2' : ''} ${card.delayClass}`}
             >
               {card.glow && <div className="bento-glow absolute top-0 right-0 w-[120px] h-[120px] pointer-events-none"></div>}

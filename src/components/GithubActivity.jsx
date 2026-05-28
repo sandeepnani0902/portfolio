@@ -72,7 +72,7 @@ export default function GithubActivity({
         <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 text-textCustom reveal reveal-delay-1">
           {title}
         </h2>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
           {stats.map((stat, idx) => (
             <div key={idx} className={`bg-surface border border-borderCustom rounded-2xl p-7 text-center transition-all duration-300 hover:border-accentCustom2 hover:-translate-y-1 ${stat.delayClass}`}>
@@ -88,24 +88,24 @@ export default function GithubActivity({
           <div className="text-sm font-semibold mb-5 text-mutedCustom">
             Contribution Activity — Last 12 Months
           </div>
-          <div 
-            style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(52, 1fr)', 
-              gap: '3px' 
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(52, 1fr)',
+              gap: '3px'
             }}
           >
             {squares.map((level, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`w-full aspect-square rounded-[2px] transition-transform duration-200 hover:scale-150 ${getSquareBgClass(level)}`}
               ></div>
             ))}
           </div>
         </div>
 
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 reveal" 
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 reveal"
           ref={langBarsRef}
         >
           <div className="text-sm md:text-base font-semibold mb-4 text-textCustom md:col-span-2">
@@ -118,11 +118,11 @@ export default function GithubActivity({
                 <span className="text-mutedCustom">{lang.percentage}%</span>
               </div>
               <div className="h-1 bg-bg3 rounded-full overflow-hidden">
-                <div 
-                  className="h-full rounded-full transition-[width] duration-[1500ms] ease-out" 
-                  style={{ 
-                    width: animateBars ? `${lang.percentage}%` : '0%', 
-                    background: lang.color 
+                <div
+                  className="h-full rounded-full transition-[width] duration-[1500ms] ease-out"
+                  style={{
+                    width: animateBars ? `${lang.percentage}%` : '0%',
+                    background: lang.color
                   }}
                 ></div>
               </div>
