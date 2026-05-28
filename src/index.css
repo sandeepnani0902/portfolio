@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #060608;
+  --bg2: #0c0c10;
+  --bg3: #111116;
+  --surface: #16161c;
+  --surface2: #1c1c24;
+  --border: #ffffff12;
+  --border2: #ffffff1f;
+  --text: #f0f0f5;
+  --muted: #8a8a9a;
+  --accent: #6c63ff;
+  --accent2: #a78bfa;
+  --accent3: #38bdf8;
+  --green: #34d399;
+  --pink: #f472b6;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-textCustom font-body overflow-x-hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060608;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6c63ff;
+}
+
+/* Custom cursor styles */
+#cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .2s, height .2s, background .2s;
+  mix-blend-mode: screen;
+}
+#cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all .12s ease;
+  opacity: .6;
+}
+
+@media (pointer: coarse) {
+  #cursor, #cursor-ring {
+    display: none;
+  }
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Custom scroll progress indicator */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6c63ff, #38bdf8);
+  z-index: 1000;
+  transition: width .1s;
+}
+
+/* Custom animations and glow gradients */
+.hero-glow {
+  background: radial-gradient(circle, rgba(108, 99, 255, .15) 0%, transparent 70%);
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(108, 99, 255, .12) 0%, transparent 70%);
+}
+
+.bento-glow {
+  background: radial-gradient(circle, rgba(108, 99, 255, .08) 0%, transparent 70%);
+}
+
+/* Projects gradients */
+.p1 {
+  background: linear-gradient(135deg, #1a0a2e, #2d1b69);
+}
+.p2 {
+  background: linear-gradient(135deg, #0a1628, #0f3460);
+}
+.p3 {
+  background: linear-gradient(135deg, #0a2818, #0d4d2f);
+}
+.p4 {
+  background: linear-gradient(135deg, #1a1200, #3d2b00);
+}
+.p5 {
+  background: linear-gradient(135deg, #1a0a0a, #4d1515);
+}
+
+/* Timeline vertical progress line */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, #6c63ff, #a78bfa, transparent);
+}
+
+/* Intersection Observer animations classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all .5s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Keyframes for animations */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, .4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
+}
+.badge-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes scrollAnim {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.scroll-line-animation {
+  animation: scrollAnim 1.5s ease-in-out infinite;
+}
+
+/* Fade Up Animation Classes */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.6s ease 0.1s forwards;
+}
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.7s ease 0.2s forwards;
+}
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.7s ease 0.3s forwards;
+}
+.animate-fade-up-delay-4 {
+  animation: fadeUp 0.7s ease 0.4s forwards;
+}
+.animate-fade-up-delay-5 {
+  animation: fadeUp 0.7s ease 0.5s forwards;
+}
+.animate-fade-up-delay-6 {
+  animation: fadeUp 0.7s ease 0.6s forwards;
+}
+.animate-fade-up-delay-8 {
+  animation: fadeUp 0.7s ease 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
