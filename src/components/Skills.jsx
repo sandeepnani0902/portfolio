@@ -9,7 +9,7 @@ export default function Skills({
       icon: "⚛️",
       title: "Frontend Development",
       desc: "Pixel-perfect UIs with modern frameworks and best practices",
-      wide: true,
+      wide: false,
       glow: true,
       delayClass: "reveal",
       skills: [
@@ -27,6 +27,7 @@ export default function Skills({
       title: "Backend & APIs",
       desc: "Scalable server logic and RESTful API design",
       delayClass: "reveal reveal-delay-1",
+      glow:true,
       skills: [
         { name: "Node.js", color: "bg-greenCustom" },
         { name: "Express.js", color: "bg-greenCustom" },
@@ -38,6 +39,7 @@ export default function Skills({
       title: "Database",
       desc: "Data modeling and efficient query design",
       delayClass: "reveal reveal-delay-1",
+      glow:true,
       skills: [
         { name: "MongoDB", color: "bg-greenCustom" },
         { name: "Mongoose", color: "bg-greenCustom" },
@@ -49,6 +51,7 @@ export default function Skills({
       title: "Tools & DevOps",
       desc: "Modern developer workflow and version control",
       delayClass: "reveal reveal-delay-2",
+      glow:true,
       skills: [
         { name: "Git & GitHub", color: "bg-pinkCustom" },
         { name: "VS Code", color: "bg-pinkCustom" },
@@ -61,6 +64,7 @@ export default function Skills({
       title: "SEO & Growth",
       desc: "Technical SEO, WordPress, performance optimization",
       delayClass: "reveal reveal-delay-2",
+      glow:true,
       skills: [
         { name: "SEO", color: "bg-accentCustom3" },
         { name: "WordPress", color: "bg-accentCustom3" },
@@ -72,6 +76,7 @@ export default function Skills({
       title: "Responsive Design",
       desc: "Mobile-first, cross-browser, accessible interfaces",
       delayClass: "reveal reveal-delay-3",
+      glow:true,
       skills: [
         { name: "Mobile First", color: "bg-accentCustom2" },
         { name: "Accessible", color: "bg-accentCustom2" },
