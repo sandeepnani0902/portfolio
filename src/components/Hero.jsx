@@ -62,13 +62,13 @@ export default function Hero({
           >
             {primaryCtaText}
           </a>
-          <a
+          {/* <a
             href={secondaryCtaLink}
             className="bg-transparent text-textCustom px-8 py-3.5 rounded-lg text-sm md:text-base font-medium transition-all duration-300 inline-flex items-center gap-2 border border-borderCustom2 hover:bg-surface hover:border-accentCustom hover:-translate-y-0.5"
             onClick={(e) => handleScrollClick(e, secondaryCtaLink)}
           >
             {secondaryCtaText}
-          </a>
+          </a> */}
         </div>
 
         <div className="flex gap-5 justify-center mt-12 animate-fade-up-delay-6 opacity-0">
